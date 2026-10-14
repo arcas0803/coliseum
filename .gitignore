@@ -1,0 +1,43 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.astro/
+coverage/
+*.log
+.DS_Store
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+
+# Local assistant instructions, skills, sessions and reports
+.agents/
+.codex/
+.claude/
+.cursor/
+.windsurf/
+.aider*
+.continue/
+.github/copilot-instructions.md
+.github/instructions/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+SKILL.md
+**/SKILL.md
+*.code-workspace
+.qa/
+
+# Archived design studies (not used by the live application)
+/vendor/anatomy/
+/docs/design.md
+/src/lib/colosseum.mjs
+/src/lib/spaces.mjs
+/src/lib/experience-content.ts
+/public/colosseum-interior.svg
+/public/colosseum-exterior.svg

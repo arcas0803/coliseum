@@ -1,0 +1,24 @@
+---
+import '@fontsource/cinzel/latin-500.css';
+import '../styles/experience.css';
+---
+<!doctype html>
+<html lang="es">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="Descubre la arquitectura y la historia del Coliseo: una reconstrucción tridimensional con fechas y fuentes del Parco archeologico del Colosseo."/><meta name="theme-color" content="#e9ece4"/><link rel="icon" href={`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}favicon.svg`}/><title>Coliseum · Un recorrido por su arquitectura</title><script is:inline>
+try { document.documentElement.dataset.theme=localStorage.getItem('coliseum-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); } catch { document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+</script></head>
+<body>
+<main aria-label="Recorrido arquitectónico del Coliseo">
+<div class="experience" id="experience">
+ <header class="experience-header"><a href="#exterior" class="brand" aria-label="Volver al comienzo del recorrido">Coliseum</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Modo oscuro" aria-pressed="false" title="Modo oscuro"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.1A8.6 8.6 0 0 1 10.9 3.4 8.6 8.6 0 1 0 20.6 13.1Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></button></header>
+ <div class="reading-progress" role="progressbar" aria-label="Progreso del recorrido" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="tour-progress"></span></div>
+ <section class="world" aria-label="Recorrido tridimensional del Coliseo"><div id="webgl-world"></div></section>
+ <article class="chapter-story" aria-labelledby="chapter-title"><p class="chapter-label" id="chapter-label">El anfiteatro Flavio</p><p class="chapter-date" id="chapter-date">80 d. C. · Inauguración</p><h1 id="chapter-title">Cien días para inaugurar una era.</h1><p class="chapter-text" id="chapter-text">Tito inauguró el anfiteatro en el año 80 con cien días de espectáculos.</p><p class="chapter-why" id="chapter-why"></p><p class="chapter-note" id="chapter-note">Marcial fue contemporáneo de los juegos inaugurales.</p><a id="chapter-source" class="source-inline" href="https://colosseo.it/en/event/blood-and-the-arena/" target="_blank" rel="noopener noreferrer">Fuente: Los juegos inaugurales ↗</a></article>
+ <footer class="tour-footer"><div class="chapter-position"><span id="chapter-count">01 / 14</span><span id="current-chapter">El anfiteatro Flavio</span></div><nav class="tour-navigation" aria-label="Capítulos del recorrido"><button id="previous-chapter" class="chapter-arrow" aria-label="Capítulo anterior" disabled>↑</button><div id="chapter-nav" class="chapter-nav"></div><button id="next-chapter" class="chapter-arrow" aria-label="Capítulo siguiente">↓</button></nav><span class="model-note">Reconstrucción didáctica</span></footer>
+ <p class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></p>
+</div>
+<div id="tour-track" aria-hidden="true"></div>
+</main>
+<noscript><div class="no-script">Activa JavaScript para recorrer la maqueta tridimensional del Coliseo.</div></noscript>
+<script>import '../lib/experience';</script>
+</body></html>
